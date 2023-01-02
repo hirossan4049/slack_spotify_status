@@ -8,9 +8,6 @@ const { options, args } = await new Command()
   .option("-s --set-token <token>", "SlackAPI token.")
   .parse(Deno.args);
 
-console.log({ args });
-console.log({ options });
-
 if (options.setToken) {
   localStorage.setItem("token", options.setToken);
   console.log("Token Setted!");
